@@ -1,0 +1,5 @@
+{
+  "layout": "layouts/place.njk",
+  "permalink": "/map/places/{{ id }}/",
+  "tags": ["mapPlaces"]
+}

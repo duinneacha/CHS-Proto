@@ -1,0 +1,21 @@
+{
+  "name": "Carrigtwohill & District Historical Society",
+  "shortName": "CDHS",
+  "description": "Carrigtwohill & District Historical Society Co Cork was established to promote awareness of our local history via our website, lectures and presentations.",
+  "url": "https://duinneacha.github.io",
+  "pathPrefix": "/CHS-Proto",
+  "email": "admin@carrigtwohillhistoricalsociety.com",
+  "formspree": "https://formspree.io/f/mkodrzpg",
+  "footerYear": 2026,
+  "social": {
+    "youtube": "https://www.youtube.com/channel/UCHByXE-54pjvvW1ZuQDGL4g",
+    "facebook": "https://www.facebook.com/profile.php?id=100071310575910",
+    "instagram": "https://www.instagram.com/carrigtwohillhistorysociety/",
+    "vimeo": "https://vimeo.com/user219271924/videos"
+  },
+  "partners": {
+    "federation": "https://localhistory.ie/",
+    "c2h2040": "https://carrigtwohillcommunity.ie/c2h2040/",
+    "barryDna": "https://www.familytreedna.com/groups/barry/about/background"
+  }
+}

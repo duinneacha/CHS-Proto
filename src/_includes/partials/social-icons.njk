@@ -1,0 +1,35 @@
+{# Quiet brand icons — aria-label on each link; decorative SVGs are aria-hidden #}
+<nav class="social-nav{% if socialClass %} {{ socialClass }}{% endif %}" aria-label="{{ socialLabel or 'Social and contact' }}">
+  <a class="social-link" href="mailto:{{ site.email }}" title="Email {{ site.email }}">
+    <span class="visually-hidden">Email</span>
+    <svg class="social-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+      <path fill="currentColor" d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4-8 5-8-5V6l8 5 8-5v2z"/>
+    </svg>
+  </a>
+  <a class="social-link social-facebook" href="{{ site.social.facebook }}" target="_blank" rel="noopener noreferrer" title="Facebook">
+    <span class="visually-hidden">Facebook</span>
+    <svg class="social-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+      <path fill="currentColor" d="M22 12.07C22 6.48 17.52 2 11.93 2S1.86 6.48 1.86 12.07c0 5.02 3.66 9.18 8.44 9.93v-7.02H7.9v-2.91h2.4V9.84c0-2.37 1.4-3.68 3.56-3.68 1.03 0 2.11.19 2.11.19v2.32h-1.19c-1.17 0-1.54.73-1.54 1.48v1.78h2.62l-.42 2.91h-2.2V22c4.78-.75 8.44-4.91 8.44-9.93z"/>
+    </svg>
+  </a>
+  <a class="social-link social-instagram" href="{{ site.social.instagram }}" target="_blank" rel="noopener noreferrer" title="Instagram">
+    <span class="visually-hidden">Instagram</span>
+    <svg class="social-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+      <path fill="currentColor" d="M7.8 2h8.4C19.4 2 22 4.6 22 7.8v8.4a5.8 5.8 0 0 1-5.8 5.8H7.8C4.6 22 2 19.4 2 16.2V7.8A5.8 5.8 0 0 1 7.8 2zm-.2 2A3.6 3.6 0 0 0 4 7.6v8.8A3.6 3.6 0 0 0 7.6 20h8.8a3.6 3.6 0 0 0 3.6-3.6V7.6A3.6 3.6 0 0 0 16.4 4H7.6zm9.65 1.5a1.25 1.25 0 1 1 0 2.5 1.25 1.25 0 0 1 0-2.5zM12 7a5 5 0 1 1 0 10 5 5 0 0 1 0-10zm0 2a3 3 0 1 0 0 6 3 3 0 0 0 0-6z"/>
+    </svg>
+  </a>
+  <a class="social-link social-youtube" href="{{ site.social.youtube }}" target="_blank" rel="noopener noreferrer" title="YouTube">
+    <span class="visually-hidden">YouTube</span>
+    <svg class="social-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+      <path fill="currentColor" d="M23.5 6.2a3 3 0 0 0-2.1-2.1C19.5 3.5 12 3.5 12 3.5s-7.5 0-9.4.6A3 3 0 0 0 .5 6.2 31.5 31.5 0 0 0 0 12a31.5 31.5 0 0 0 .5 5.8 3 3 0 0 0 2.1 2.1c1.9.6 9.4.6 9.4.6s7.5 0 9.4-.6a3 3 0 0 0 2.1-2.1A31.5 31.5 0 0 0 24 12a31.5 31.5 0 0 0-.5-5.8zM9.75 15.5v-7l6.5 3.5-6.5 3.5z"/>
+    </svg>
+  </a>
+  {% if showVimeo %}
+  <a class="social-link social-vimeo" href="{{ site.social.vimeo }}" target="_blank" rel="noopener noreferrer" title="Vimeo">
+    <span class="visually-hidden">Vimeo</span>
+    <svg class="social-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+      <path fill="currentColor" d="M23.98 6.42c-.1 2.2-1.64 5.22-4.62 9.05C16.27 19.45 13.8 21.4 11.7 21.4c-1.32 0-2.44-1.22-3.35-3.65-.61-2.23-1.21-4.46-1.82-6.7-.68-2.43-1.41-3.65-2.19-3.65-.17 0-.76.36-1.78 1.07L1.5 7.3c1.12-.98 2.22-1.96 3.3-2.94C6.4 2.9 7.7 2.3 8.56 2.37c2.05.19 3.31 1.21 3.78 3.06.51 1.98.86 3.21 1.07 3.69.6 1.73 1.27 2.6 2 2.6.56 0 1.41-.89 2.54-2.67 1.12-1.78 1.73-3.14 1.81-4.07.16-1.54-.44-2.32-1.81-2.32-.64 0-1.3.15-1.98.44 1.32-4.32 3.84-6.42 7.57-6.3 2.76.09 4.06 1.87 3.9 5.34z"/>
+    </svg>
+  </a>
+  {% endif %}
+</nav>

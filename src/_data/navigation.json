@@ -1,0 +1,58 @@
+[
+  {
+    "label": "Home",
+    "children": [
+      { "label": "Home", "url": "/" },
+      { "label": "About Us", "url": "/about/about-us/" },
+      { "label": "Committee", "url": "/membership/committee/" },
+      { "label": "Membership", "url": "/membership/current-membership/" },
+      { "label": "Contact Us", "url": "/about/contact-us/" },
+      { "label": "Events Calendar", "url": "/events/projects-and-events/calendar/" },
+      { "label": "Video Collection", "url": "https://vimeo.com/user219271924/videos", "external": true }
+    ]
+  },
+  {
+    "label": "Projects",
+    "children": [
+      { "label": "Historical Map", "url": "/map/" },
+      { "label": "Munster Technical University (MTU)", "url": "/cit-interactive/cit-map/" },
+      { "label": "Local Cemeteries", "url": "/cemeteries/about-cemeteries/" }
+    ]
+  },
+  {
+    "label": "Local History",
+    "children": [
+      { "label": "Archaeology", "url": "/local-history/archaeological/archaeology/" },
+      { "label": "RIC Barrack", "url": "/events/projects-and-events/past-events/taking-of-the-barracks/barrack-story/" },
+      { "label": "Valuations & Surveys", "url": "/local-history/townlands/townlands/" },
+      { "label": "Down's Survey", "url": "/surveysand-valuations/downs-survey/downs-survey/" },
+      { "label": "Topographical Survey", "url": "/surveysand-valuations/samuel-lewis/samuel-lewis/" }
+    ]
+  },
+  {
+    "label": "Notable Families",
+    "children": [
+      { "label": "Barrymore", "url": "/persons-of-note/barry/barryscourt/barryscourt/" },
+      { "label": "Cotter of Annegrove", "url": "/persons-of-note/cotter/cotter/" },
+      { "label": "Durdin of Fontarabia", "url": "/persons-of-note/durdin/durdin/" },
+      { "label": "Coppinger of Barryscourt", "url": "/persons-of-note/coppinger/" }
+    ]
+  },
+  {
+    "label": "Religious of Parish",
+    "children": [
+      { "label": "Parish Churches", "url": "/religious-of-parish/parish-churches/parish-churches/" },
+      { "label": "Poor Servants of the Mother of God", "url": "/religious-of-parish/poor-servants/poor-servants/" },
+      { "label": "The Clergy", "url": "/religious-of-parish/clergy/parish-clergy/" }
+    ]
+  },
+  {
+    "label": "Local Schools",
+    "children": [
+      { "label": "Hedge Schools", "url": "/schools/hedge/hedge-schoolsaspx/" },
+      { "label": "Boarding School", "url": "/schools/boarding-school/boarding-school/" },
+      { "label": "First National School", "url": "/schools/first-national-school/first-school/" },
+      { "label": "Boys School", "url": "/schools/boys-school/boys-school/" }
+    ]
+  }
+]

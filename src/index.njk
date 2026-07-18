@@ -1,0 +1,39 @@
+---
+title: Home
+description: Carrigtwohill & District Historical Society Co Cork was established to promote awareness of our local history via our website, lectures and presentations.
+permalink: /
+layout: layouts/base.njk
+bodyClass: home
+---
+<section class="home-hero">
+  <div class="home-lead">
+    <h1 class="home-greeting">Céad Míle Fáilte</h1>
+    <p>Welcome to our website, and it is hoped you will be able to discover plenty of interesting details about our parish and its rich history.</p>
+    <p>As we are small in number, the use of multiple social media platforms was thought impracticable for us to manage, and only ever had Facebook. However, we were able to launch Instagram in 2023, only possible with the assistance of Students of MTU. The full story may be found under the ‘Projects’ menu item.</p>
+    <p>Also included is a link to our YouTube channel where videos may be viewed of some of our events and lectures.</p>
+    <p style="margin-top:1.25rem">
+      <a class="btn btn-membership" href="{{ '/membership/current-membership/' | url }}">Join or Renew Membership</a>
+    </p>
+  </div>
+  <figure class="home-stone">
+    <img src="{{ '/assets/Styles/Images/CarrigtwohillStone.jpg' | url }}" alt="Carrigtwohill stone marker">
+  </figure>
+</section>
+
+<section class="home-panels" aria-label="Explore">
+  <article class="panel panel-gold">
+    <h2>Historical map</h2>
+    <p>Explore places across the parish — castles, forts, churches, and the MTU village exhibit films.</p>
+    <a href="{{ '/map/' | url }}">Open the map</a>
+  </article>
+  <article class="panel">
+    <h2>About the society</h2>
+    <p>Learn who we are, meet the committee, and get in touch.</p>
+    <a href="{{ '/about/about-us/' | url }}">About us</a>
+  </article>
+  <article class="panel panel-red">
+    <h2>Become a member</h2>
+    <p>Membership keeps the society’s research, lectures, and projects going.</p>
+    <a href="{{ '/membership/current-membership/' | url }}">Join or renew</a>
+  </article>
+</section>

@@ -1,0 +1,41 @@
+---
+layout: layouts/base.njk
+---
+<article class="page place-page">
+  <p class="place-back"><a href="{{ '/map/' | url }}">← Back to map</a></p>
+  <header class="page-header">
+    <h1 class="page-title">{{ name or title }}</h1>
+    {% if category and category != "Unknown" %}
+    <p class="place-meta">{{ category }}</p>
+    {% else %}
+    <p class="place-meta place-meta-empty">Category to be added</p>
+    {% endif %}
+  </header>
+
+  <figure class="place-hero{% if not heroImage %} place-hero-empty{% endif %}">
+    {% if heroImage %}
+    <img src="{{ heroImage | url }}" alt="{{ name or title }}">
+    {% else %}
+    <div class="place-placeholder-image" role="img" aria-label="Photograph to be added">
+      <span>Photograph to be added</span>
+    </div>
+    {% endif %}
+    {% if heroCaption %}<figcaption>{{ heroCaption }}</figcaption>{% endif %}
+  </figure>
+
+  <div class="place-body prose">
+    {% set plain = content | striptags | trim %}
+    {% if plain %}
+      {{ content | safe }}
+    {% else %}
+      <div class="place-placeholder-text">
+        <p><strong>Notes to be added</strong></p>
+        <p>This place is on the map so the committee can see what still needs research: a short description, sources, and photographs. Edit the Markdown file for this place under <code>src/places/</code>.</p>
+      </div>
+    {% endif %}
+  </div>
+
+  {% if author %}
+  <p class="place-author">Record: {{ author }}</p>
+  {% endif %}
+</article>

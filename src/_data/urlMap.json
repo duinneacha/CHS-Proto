@@ -1,0 +1,482 @@
+[
+  {
+    "old": "/About/AboutUs.aspx",
+    "oldEncoded": "/About/AboutUs.aspx",
+    "new": "/about/about-us/",
+    "title": "About Us"
+  },
+  {
+    "old": "/Cemeteries/AboutCemeteries.aspx",
+    "oldEncoded": "/Cemeteries/AboutCemeteries.aspx",
+    "new": "/cemeteries/about-cemeteries/",
+    "title": "Local Cemeteries"
+  },
+  {
+    "old": "/Cemeteries/Interred.aspx",
+    "oldEncoded": "/Cemeteries/Interred.aspx",
+    "new": "/cemeteries/interred/",
+    "title": "Local Cemetery Burials"
+  },
+  {
+    "old": "/Cemeteries/Templecurraheen-graveyard.aspx",
+    "oldEncoded": "/Cemeteries/Templecurraheen-graveyard.aspx",
+    "new": "/cemeteries/templecurraheen-graveyard/",
+    "title": "Templecurraheen"
+  },
+  {
+    "old": "/CITInteractive/CITAbbeyRuins.aspx",
+    "oldEncoded": "/CITInteractive/CITAbbeyRuins.aspx",
+    "new": "/cit-interactive/cit-abbey-ruins/",
+    "title": "Augustinian Abbey Ruins"
+  },
+  {
+    "old": "/CITInteractive/CITBarracks.aspx",
+    "oldEncoded": "/CITInteractive/CITBarracks.aspx",
+    "new": "/cit-interactive/cit-barracks/",
+    "title": "Royal Irish Constabulary Carrigtwhill"
+  },
+  {
+    "old": "/CITInteractive/CITBarryscourt.aspx",
+    "oldEncoded": "/CITInteractive/CITBarryscourt.aspx",
+    "new": "/cit-interactive/cit-barryscourt/",
+    "title": "Barryscourt Castle"
+  },
+  {
+    "old": "/CITInteractive/CITConvent.aspx",
+    "oldEncoded": "/CITInteractive/CITConvent.aspx",
+    "new": "/cit-interactive/cit-convent/",
+    "title": "Poor Servants of the Mother of God"
+  },
+  {
+    "old": "/CITInteractive/CITInteractiveMap.aspx",
+    "oldEncoded": "/CITInteractive/CITInteractiveMap.aspx",
+    "new": "/cit-interactive/cit-interactive-map/",
+    "title": "MTU - Interactive Map"
+  },
+  {
+    "old": "/CITInteractive/CITMap.aspx",
+    "oldEncoded": "/CITInteractive/CITMap.aspx",
+    "new": "/cit-interactive/cit-map/",
+    "title": "MTU Map of Carrigtwohill"
+  },
+  {
+    "old": "/CITInteractive/CITRossmore.aspx",
+    "oldEncoded": "/CITInteractive/CITRossmore.aspx",
+    "new": "/cit-interactive/cit-rossmore/",
+    "title": "Battle of Rossmore"
+  },
+  {
+    "old": "/CITInteractive/CITSchools.aspx",
+    "oldEncoded": "/CITInteractive/CITSchools.aspx",
+    "new": "/cit-interactive/cit-schools/",
+    "title": "Schools of Carrigtwohill"
+  },
+  {
+    "old": "/CITInteractive/CITStMarys.aspx",
+    "oldEncoded": "/CITInteractive/CITStMarys.aspx",
+    "new": "/cit-interactive/cit-st-marys/",
+    "title": "St Mary's Carrigtwohill"
+  },
+  {
+    "old": "/CITInteractive/SampleCredits.aspx",
+    "oldEncoded": "/CITInteractive/SampleCredits.aspx",
+    "new": "/cit-interactive/sample-credits/",
+    "title": "Sample Credits"
+  },
+  {
+    "old": "/CITInteractive/SampleIntroduction.aspx",
+    "oldEncoded": "/CITInteractive/SampleIntroduction.aspx",
+    "new": "/cit-interactive/sample-introduction/",
+    "title": "Sample Introduction"
+  },
+  {
+    "old": "/CITInteractive/VillageSignage.aspx",
+    "oldEncoded": "/CITInteractive/VillageSignage.aspx",
+    "new": "/cit-interactive/village-signage/",
+    "title": "Projects & Events"
+  },
+  {
+    "old": "/Default.aspx",
+    "oldEncoded": "/Default.aspx",
+    "new": "/",
+    "title": "Home"
+  },
+  {
+    "old": "/Events/Barrymore DNA Project/FotaHouseDNAProject.aspx",
+    "oldEncoded": "/Events/Barrymore%20DNA%20Project/FotaHouseDNAProject.aspx",
+    "new": "/events/barrymore-dna-project/fota-house-dna-project/",
+    "title": "Matt Barry's DNA Fota House Presentation"
+  },
+  {
+    "old": "/Events/Cork Celebrates Past/EasternHospitals.aspx",
+    "oldEncoded": "/Events/Cork%20Celebrates%20Past/EasternHospitals.aspx",
+    "new": "/events/cork-celebrates-past/eastern-hospitals/",
+    "title": "EasternHospitals"
+  },
+  {
+    "old": "/Events/Debarra/DeBarra.aspx",
+    "oldEncoded": "/Events/Debarra/DeBarra.aspx",
+    "new": "/events/debarra/de-barra/",
+    "title": "Dáibhí de Barra"
+  },
+  {
+    "old": "/Events/Fota Solar/FotaSolarPanel.aspx",
+    "oldEncoded": "/Events/Fota%20Solar/FotaSolarPanel.aspx",
+    "new": "/events/fota-solar/fota-solar-panel/",
+    "title": "FotaSolarPanel"
+  },
+  {
+    "old": "/Events/HayMaking/MakingHay.aspx",
+    "oldEncoded": "/Events/HayMaking/MakingHay.aspx",
+    "new": "/events/hay-making/making-hay/",
+    "title": "Making Hay"
+  },
+  {
+    "old": "/Events/Projects And Events/Calendar.aspx",
+    "oldEncoded": "/Events/Projects%20And%20Events/Calendar.aspx",
+    "new": "/events/projects-and-events/calendar/",
+    "title": "Projects & Events"
+  },
+  {
+    "old": "/Events/Projects And Events/Past Events/City Hall/CelebratingCorkPast.aspx",
+    "oldEncoded": "/Events/Projects%20And%20Events/Past%20Events/City%20Hall/CelebratingCorkPast.aspx",
+    "new": "/events/projects-and-events/past-events/city-hall/celebrating-cork-past/",
+    "title": "Celebrating Cork Past - City Hall"
+  },
+  {
+    "old": "/Events/Projects And Events/Past Events/Edward Bransfield/EdwardBransfield.aspx",
+    "oldEncoded": "/Events/Projects%20And%20Events/Past%20Events/Edward%20Bransfield/EdwardBransfield.aspx",
+    "new": "/events/projects-and-events/past-events/edward-bransfield/edward-bransfield/",
+    "title": "Edward Bransfield"
+  },
+  {
+    "old": "/Events/Projects And Events/Past Events/Miriam O'Donovan/MiriamODonovan.aspx",
+    "oldEncoded": "/Events/Projects%20And%20Events/Past%20Events/Miriam%20O'Donovan/MiriamODonovan.aspx",
+    "new": "/events/projects-and-events/past-events/miriam-odonovan/miriam-o-donovan/",
+    "title": "Miriam O'Donovan - Dáibhí de Barra"
+  },
+  {
+    "old": "/Events/Projects And Events/Past Events/PastEvents.aspx",
+    "oldEncoded": "/Events/Projects%20And%20Events/Past%20Events/PastEvents.aspx",
+    "new": "/events/projects-and-events/past-events/past-events/",
+    "title": "Past Events"
+  },
+  {
+    "old": "/Events/Projects And Events/Past Events/Patricia Lyons/TourofCloyne.aspx",
+    "oldEncoded": "/Events/Projects%20And%20Events/Past%20Events/Patricia%20Lyons/TourofCloyne.aspx",
+    "new": "/events/projects-and-events/past-events/patricia-lyons/tourof-cloyne/",
+    "title": "Cloyne Cathedral & Round Tower"
+  },
+  {
+    "old": "/Events/Projects And Events/Past Events/Sean Horgan/SeanHorgan.aspx",
+    "oldEncoded": "/Events/Projects%20And%20Events/Past%20Events/Sean%20Horgan/SeanHorgan.aspx",
+    "new": "/events/projects-and-events/past-events/sean-horgan/sean-horgan/",
+    "title": "Sean Horgan Lectures"
+  },
+  {
+    "old": "/Events/Projects And Events/Past Events/Taking of the Barracks/BarrackStory.aspx",
+    "oldEncoded": "/Events/Projects%20And%20Events/Past%20Events/Taking%20of%20the%20Barracks/BarrackStory.aspx",
+    "new": "/events/projects-and-events/past-events/taking-of-the-barracks/barrack-story/",
+    "title": "RIC Barrack"
+  },
+  {
+    "old": "/Events/Projects And Events/Past Events/Taking of the Barracks/DVD Presentation.aspx",
+    "oldEncoded": "/Events/Projects%20And%20Events/Past%20Events/Taking%20of%20the%20Barracks/DVD%20Presentation.aspx",
+    "new": "/events/projects-and-events/past-events/taking-of-the-barracks/dvd-presentation/",
+    "title": "DVD Presentation"
+  },
+  {
+    "old": "/Events/Projects And Events/Past Events/Taking of the Barracks/Plaque/PlaqueUnveiling.aspx",
+    "oldEncoded": "/Events/Projects%20And%20Events/Past%20Events/Taking%20of%20the%20Barracks/Plaque/PlaqueUnveiling.aspx",
+    "new": "/events/projects-and-events/past-events/taking-of-the-barracks/plaque/plaque-unveiling/",
+    "title": "Plaque Unveiling"
+  },
+  {
+    "old": "/Events/Projects And Events/Past Events/Taking of the Barracks/RICStation.aspx",
+    "oldEncoded": "/Events/Projects%20And%20Events/Past%20Events/Taking%20of%20the%20Barracks/RICStation.aspx",
+    "new": "/events/projects-and-events/past-events/taking-of-the-barracks/ric-station/",
+    "title": "Projects & Events"
+  },
+  {
+    "old": "/Events/Projects And Events/Past Events/Taking of the Barracks/Temporary Pannel/Temporarypanel .aspx",
+    "oldEncoded": "/Events/Projects%20And%20Events/Past%20Events/Taking%20of%20the%20Barracks/Temporary%20Pannel/Temporarypanel%20.aspx",
+    "new": "/events/projects-and-events/past-events/taking-of-the-barracks/temporary-pannel/temporarypanel/",
+    "title": "RIC Barracks Temporary Panel"
+  },
+  {
+    "old": "/Events/Projects And Events/Past Events/Western Front Association/WesternFrontAssociation.aspx",
+    "oldEncoded": "/Events/Projects%20And%20Events/Past%20Events/Western%20Front%20Association/WesternFrontAssociation.aspx",
+    "new": "/events/projects-and-events/past-events/western-front-association/western-front-association/",
+    "title": "Committee & Membership"
+  },
+  {
+    "old": "/Events/Videos/CotterWreath.aspx",
+    "oldEncoded": "/Events/Videos/CotterWreath.aspx",
+    "new": "/events/videos/cotter-wreath/",
+    "title": "CotterWreath"
+  },
+  {
+    "old": "/Events/Videos/Dáibhí de Barra Videos.aspx",
+    "oldEncoded": "/Events/Videos/D%C3%A1ibh%C3%AD%20de%20Barra%20Videos.aspx",
+    "new": "/events/videos/daibhi-de-barra-videos/",
+    "title": "Video Gallery"
+  },
+  {
+    "old": "/Events/Videos/Event Videos.aspx",
+    "oldEncoded": "/Events/Videos/Event%20Videos.aspx",
+    "new": "/events/videos/event-videos/",
+    "title": "Carrigtwohill Video Collection"
+  },
+  {
+    "old": "/Events/Videos/VideoCollection.aspx",
+    "oldEncoded": "/Events/Videos/VideoCollection.aspx",
+    "new": "/events/videos/video-collection/",
+    "title": "Video Gallery"
+  },
+  {
+    "old": "/Local History/Archaeological/Altar Stone/AltarStone.aspx",
+    "oldEncoded": "/Local%20History/Archaeological/Altar%20Stone/AltarStone.aspx",
+    "new": "/local-history/archaeological/altar-stone/altar-stone/",
+    "title": "Ancient Altar Stone"
+  },
+  {
+    "old": "/Local History/Archaeological/Archaeology.aspx",
+    "oldEncoded": "/Local%20History/Archaeological/Archaeology.aspx",
+    "new": "/local-history/archaeological/archaeology/",
+    "title": "Archaeology"
+  },
+  {
+    "old": "/Local History/Ballyadam/Ballyadam.aspx",
+    "oldEncoded": "/Local%20History/Ballyadam/Ballyadam.aspx",
+    "new": "/local-history/ballyadam/ballyadam/",
+    "title": "Local History"
+  },
+  {
+    "old": "/Local History/Caves - Ringforts/Caves/Caves.aspx",
+    "oldEncoded": "/Local%20History/Caves%20-%20Ringforts/Caves/Caves.aspx",
+    "new": "/local-history/caves-ringforts/caves/caves/",
+    "title": "Caves and subterranean chambers"
+  },
+  {
+    "old": "/Local History/Folklore/Ballintubber/Ballintubber.aspx",
+    "oldEncoded": "/Local%20History/Folklore/Ballintubber/Ballintubber.aspx",
+    "new": "/local-history/folklore/ballintubber/ballintubber/",
+    "title": "Ballintubber"
+  },
+  {
+    "old": "/Local History/Military/ArmyPensions.aspx",
+    "oldEncoded": "/Local%20History/Military/ArmyPensions.aspx",
+    "new": "/local-history/military/army-pensions/",
+    "title": "Military Service"
+  },
+  {
+    "old": "/Local History/Townlands/Townlands.aspx",
+    "oldEncoded": "/Local%20History/Townlands/Townlands.aspx",
+    "new": "/local-history/townlands/townlands/",
+    "title": "Carrigtwohill Townlands"
+  },
+  {
+    "old": "/Local History/Village Traders/Barretts/BarretsForge.aspx",
+    "oldEncoded": "/Local%20History/Village%20Traders/Barretts/BarretsForge.aspx",
+    "new": "/local-history/village-traders/barretts/barrets-forge/",
+    "title": "Barrett's Forge"
+  },
+  {
+    "old": "/Membership/Committee.aspx",
+    "oldEncoded": "/Membership/Committee.aspx",
+    "new": "/membership/committee/",
+    "title": "Committee & Membership"
+  },
+  {
+    "old": "/Membership/CurrentMembership.aspx",
+    "oldEncoded": "/Membership/CurrentMembership.aspx",
+    "new": "/membership/current-membership/",
+    "title": "Current Membership"
+  },
+  {
+    "old": "/Membership/Johnny Harte/JohnnyHartespx.aspx",
+    "oldEncoded": "/Membership/Johnny%20Harte/JohnnyHartespx.aspx",
+    "new": "/membership/johnny-harte/johnny-hartespx/",
+    "title": "Johnny Harte - Our President Lamented"
+  },
+  {
+    "old": "/Parish Book/ParishBook.aspx",
+    "oldEncoded": "/Parish%20Book/ParishBook.aspx",
+    "new": "/parish-book/parish-book/",
+    "title": "ParishBook"
+  },
+  {
+    "old": "/Persons of Note/Barry/Barrymore.aspx",
+    "oldEncoded": "/Persons%20of%20Note/Barry/Barrymore.aspx",
+    "new": "/persons-of-note/barry/barrymore/",
+    "title": "Families of Carrigtwohill"
+  },
+  {
+    "old": "/Persons of Note/Barry/Barryscourt/Barryscourt.aspx",
+    "oldEncoded": "/Persons%20of%20Note/Barry/Barryscourt/Barryscourt.aspx",
+    "new": "/persons-of-note/barry/barryscourt/barryscourt/",
+    "title": "Families of Carrigtwohill"
+  },
+  {
+    "old": "/Persons of Note/Barry/Debarra/DáibhdeBarra.aspx",
+    "oldEncoded": "/Persons%20of%20Note/Barry/Debarra/D%C3%A1ibhdeBarra.aspx",
+    "new": "/persons-of-note/barry/debarra/daibhde-barra/",
+    "title": "Dáibh de Barra"
+  },
+  {
+    "old": "/Persons of Note/Barry/DNAProject.aspx",
+    "oldEncoded": "/Persons%20of%20Note/Barry/DNAProject.aspx",
+    "new": "/persons-of-note/barry/dna-project/",
+    "title": "Genetic Genealogy and Cork Families"
+  },
+  {
+    "old": "/Persons of Note/Barry/Garrett Standish Barry/GarrettStandishBarry.aspx",
+    "oldEncoded": "/Persons%20of%20Note/Barry/Garrett%20Standish%20Barry/GarrettStandishBarry.aspx",
+    "new": "/persons-of-note/barry/garrett-standish-barry/garrett-standish-barry/",
+    "title": "Garrett Standish Barry of Leamlara"
+  },
+  {
+    "old": "/Persons of Note/Barry/Smith Barry/James Hugh Smith Barry/JamesHughSmithBarry.aspx",
+    "oldEncoded": "/Persons%20of%20Note/Barry/Smith%20Barry/James%20Hugh%20Smith%20Barry/JamesHughSmithBarry.aspx",
+    "new": "/persons-of-note/barry/smith-barry/james-hugh-smith-barry/james-hugh-smith-barry/",
+    "title": "James Hugh Smith Barry"
+  },
+  {
+    "old": "/Persons of Note/Barry/Smith Barry/John Smith Barry/JohnSmthBarry.aspx",
+    "oldEncoded": "/Persons%20of%20Note/Barry/Smith%20Barry/John%20Smith%20Barry/JohnSmthBarry.aspx",
+    "new": "/persons-of-note/barry/smith-barry/john-smith-barry/john-smth-barry/",
+    "title": "John Smith Barry of Foaty"
+  },
+  {
+    "old": "/Persons of Note/Barry/Standish Barry/StandishBarry.aspx",
+    "oldEncoded": "/Persons%20of%20Note/Barry/Standish%20Barry/StandishBarry.aspx",
+    "new": "/persons-of-note/barry/standish-barry/standish-barry/",
+    "title": "Standish Barry of Leamlara"
+  },
+  {
+    "old": "/Persons of Note/Coppinger.aspx",
+    "oldEncoded": "/Persons%20of%20Note/Coppinger.aspx",
+    "new": "/persons-of-note/coppinger/",
+    "title": "Families of Carrigtwohill"
+  },
+  {
+    "old": "/Persons of Note/Cotter/Cotter.aspx",
+    "oldEncoded": "/Persons%20of%20Note/Cotter/Cotter.aspx",
+    "new": "/persons-of-note/cotter/cotter/",
+    "title": "Cotter of Anngrove"
+  },
+  {
+    "old": "/Persons of Note/Cotter/FamilyVault.aspx",
+    "oldEncoded": "/Persons%20of%20Note/Cotter/FamilyVault.aspx",
+    "new": "/persons-of-note/cotter/family-vault/",
+    "title": "Cotter Family Vault"
+  },
+  {
+    "old": "/Persons of Note/Cotter/James Cotter/SirJamesCotter.aspx",
+    "oldEncoded": "/Persons%20of%20Note/Cotter/James%20Cotter/SirJamesCotter.aspx",
+    "new": "/persons-of-note/cotter/james-cotter/sir-james-cotter/",
+    "title": "Hanged James Cotter"
+  },
+  {
+    "old": "/Persons of Note/Cotter/Sir James Cotter Senior/SirJamesCotterSenior.aspx",
+    "oldEncoded": "/Persons%20of%20Note/Cotter/Sir%20James%20Cotter%20Senior/SirJamesCotterSenior.aspx",
+    "new": "/persons-of-note/cotter/sir-james-cotter-senior/sir-james-cotter-senior/",
+    "title": "Colonel Sir James Cotter"
+  },
+  {
+    "old": "/Persons of Note/Cotter/Sir James Laurence Cotter/SirJamesLaurenceCotter.aspx",
+    "oldEncoded": "/Persons%20of%20Note/Cotter/Sir%20James%20Laurence%20Cotter/SirJamesLaurenceCotter.aspx",
+    "new": "/persons-of-note/cotter/sir-james-laurence-cotter/sir-james-laurence-cotter/",
+    "title": "Sir James Laurence Cotter"
+  },
+  {
+    "old": "/Persons of Note/Durdin/Durdin.aspx",
+    "oldEncoded": "/Persons%20of%20Note/Durdin/Durdin.aspx",
+    "new": "/persons-of-note/durdin/durdin/",
+    "title": "Durdin Family"
+  },
+  {
+    "old": "/Religious of Parish/Clergy/ParishClergy.aspx",
+    "oldEncoded": "/Religious%20of%20Parish/Clergy/ParishClergy.aspx",
+    "new": "/religious-of-parish/clergy/parish-clergy/",
+    "title": "Parish Clergy"
+  },
+  {
+    "old": "/Religious of Parish/Clergy/Richard Seymour/RichardSeymour.aspx",
+    "oldEncoded": "/Religious%20of%20Parish/Clergy/Richard%20Seymour/RichardSeymour.aspx",
+    "new": "/religious-of-parish/clergy/richard-seymour/richard-seymour/",
+    "title": "Richard Seymour"
+  },
+  {
+    "old": "/Religious of Parish/Parish Churches/Abbey/Abbey.aspx",
+    "oldEncoded": "/Religious%20of%20Parish/Parish%20Churches/Abbey/Abbey.aspx",
+    "new": "/religious-of-parish/parish-churches/abbey/abbey/",
+    "title": "Augustinian Canon Abbey"
+  },
+  {
+    "old": "/Religious of Parish/Parish Churches/PapalTaxes.aspx",
+    "oldEncoded": "/Religious%20of%20Parish/Parish%20Churches/PapalTaxes.aspx",
+    "new": "/religious-of-parish/parish-churches/papal-taxes/",
+    "title": "Papal Taxes"
+  },
+  {
+    "old": "/Religious of Parish/Parish Churches/ParishChurches.aspx",
+    "oldEncoded": "/Religious%20of%20Parish/Parish%20Churches/ParishChurches.aspx",
+    "new": "/religious-of-parish/parish-churches/parish-churches/",
+    "title": "Parish Origins"
+  },
+  {
+    "old": "/Religious of Parish/Parish Churches/St David's/StDavidsChurch.aspx",
+    "oldEncoded": "/Religious%20of%20Parish/Parish%20Churches/St%20David's/StDavidsChurch.aspx",
+    "new": "/religious-of-parish/parish-churches/st-davids/st-davids-church/",
+    "title": "St David's Church of Ireland"
+  },
+  {
+    "old": "/Religious of Parish/Parish Churches/St Mary's/StMarys.aspx",
+    "oldEncoded": "/Religious%20of%20Parish/Parish%20Churches/St%20Mary's/StMarys.aspx",
+    "new": "/religious-of-parish/parish-churches/st-marys/st-marys/",
+    "title": "St Mary's Carrigtwohill"
+  },
+  {
+    "old": "/Religious of Parish/Poor Servants/PoorServants.aspx",
+    "oldEncoded": "/Religious%20of%20Parish/Poor%20Servants/PoorServants.aspx",
+    "new": "/religious-of-parish/poor-servants/poor-servants/",
+    "title": "Poor Servants of the Mother of God"
+  },
+  {
+    "old": "/Schools/Boarding School/BoardingSchool.aspx",
+    "oldEncoded": "/Schools/Boarding%20School/BoardingSchool.aspx",
+    "new": "/schools/boarding-school/boarding-school/",
+    "title": "Our Schools"
+  },
+  {
+    "old": "/Schools/Boys School/BoysSchool.aspx",
+    "oldEncoded": "/Schools/Boys%20School/BoysSchool.aspx",
+    "new": "/schools/boys-school/boys-school/",
+    "title": "Boys' National School"
+  },
+  {
+    "old": "/Schools/First National School/FirstSchool.aspx",
+    "oldEncoded": "/Schools/First%20National%20School/FirstSchool.aspx",
+    "new": "/schools/first-national-school/first-school/",
+    "title": "First National School"
+  },
+  {
+    "old": "/Schools/Hedge/HedgeSchoolsaspx.aspx",
+    "oldEncoded": "/Schools/Hedge/HedgeSchoolsaspx.aspx",
+    "new": "/schools/hedge/hedge-schoolsaspx/",
+    "title": "Our Schools"
+  },
+  {
+    "old": "/SurveysandValuations/Downs Survey/DownsSurvey.aspx",
+    "oldEncoded": "/SurveysandValuations/Downs%20Survey/DownsSurvey.aspx",
+    "new": "/surveysand-valuations/downs-survey/downs-survey/",
+    "title": "Down's Survey"
+  },
+  {
+    "old": "/SurveysandValuations/Samuel Lewis/SamuelLewis.aspx",
+    "oldEncoded": "/SurveysandValuations/Samuel%20Lewis/SamuelLewis.aspx",
+    "new": "/surveysand-valuations/samuel-lewis/samuel-lewis/",
+    "title": "Samuel Lewis - Topographical Directory"
+  }
+]

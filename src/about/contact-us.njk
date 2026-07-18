@@ -1,0 +1,38 @@
+---
+title: Contact Us
+description: Contact Carrigtwohill & District Historical Society.
+permalink: /about/contact-us/
+layout: layouts/base.njk
+---
+<article class="page">
+  <header class="page-header">
+    <h1 class="page-title">Contact Us</h1>
+  </header>
+
+  <div class="contact-layout">
+    <div>
+      <div class="email-callout">
+        <strong>Email us directly</strong>
+        <a href="mailto:{{ site.email }}">{{ site.email }}</a>
+        <p style="margin:0.75rem 0 0;font-size:0.95rem">
+          Prefer email if you need to send attachments (photos, documents, research files). The form below does not accept file uploads.
+        </p>
+      </div>
+      <p>We welcome enquiries about membership, local history research, and society events.</p>
+    </div>
+
+    <form class="contact-form" action="{{ site.formspree }}" method="POST">
+      <input type="hidden" name="_subject" value="CHS website contact">
+      <label for="name">Name</label>
+      <input id="name" name="name" type="text" required autocomplete="name">
+
+      <label for="email">Your email</label>
+      <input id="email" name="email" type="email" required autocomplete="email">
+
+      <label for="message">Message</label>
+      <textarea id="message" name="message" rows="7" required></textarea>
+
+      <button type="submit">Send message</button>
+    </form>
+  </div>
+</article>

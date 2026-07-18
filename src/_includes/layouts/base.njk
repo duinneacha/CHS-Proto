@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en-IE">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{% if title and title != site.name %}{{ title }} · {% endif %}{{ site.name }}</title>
+  <meta name="description" content="{{ description or site.description }}">
+  <link rel="canonical" href="{{ site.url }}{{ site.pathPrefix }}{{ page.url }}">
+  <meta property="og:title" content="{{ title or site.name }}">
+  <meta property="og:description" content="{{ description or site.description }}">
+  <meta property="og:type" content="website">
+  <link rel="icon" href="{{ '/assets/Styles/Images/CDHSLogo.png' | url }}">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,700&family=Source+Sans+3:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="{{ '/css/site.css' | url }}">
+  {% if maplibre %}
+  <link rel="stylesheet" href="https://unpkg.com/maplibre-gl@5.6.1/dist/maplibre-gl.css" crossorigin="anonymous">
+  {% endif %}
+</head>
+<body class="{{ bodyClass }}">
+  {% include "partials/header.njk" %}
+  <main id="main" class="site-main{% if maplibre %} site-main-map{% endif %}">
+    {{ content | safe }}
+  </main>
+  {% include "partials/footer.njk" %}
+  <script src="{{ '/js/nav.js' | url }}" defer></script>
+  {% if maplibre %}
+  <script src="https://unpkg.com/maplibre-gl@5.6.1/dist/maplibre-gl.js" crossorigin="anonymous"></script>
+  <script src="{{ '/js/map.js' | url }}"></script>
+  {% endif %}
+  {% if paypalClientId and paypalHostedButtonId %}
+  <script src="https://www.paypal.com/sdk/js?client-id={{ paypalClientId }}&components=hosted-buttons&disable-funding=venmo&currency=EUR"></script>
+  <script>
+    paypal.HostedButtons({
+      hostedButtonId: "{{ paypalHostedButtonId }}"
+    }).render("#paypal-container-{{ paypalHostedButtonId }}");
+  </script>
+  {% endif %}
+</body>
+</html>

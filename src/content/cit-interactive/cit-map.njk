@@ -1,0 +1,84 @@
+---
+title: "MTU Map of Carrigtwohill"
+permalink: /cit-interactive/cit-map/
+layout: layouts/page.njk
+bodyClass: mtu-map-page
+oldPath: "/CITInteractive/CITMap.aspx"
+---
+
+{% set sites = [
+  { n: 1, label: "Abbey Ruins, Old Cemetery & St David’s Church", href: "/cit-interactive/cit-abbey-ruins/", left: 43.13, top: 11.58, w: 4.82, h: 4.36 },
+  { n: 2, label: "Poor Servants of the Mother of God (Field of a Cow)", href: "/cit-interactive/cit-convent/", left: 37.02, top: 11.93, w: 5.17, h: 5.73 },
+  { n: 3, label: "St Mary's RC Parish Church", href: "/cit-interactive/cit-st-marys/", left: 31.61, top: 16.40, w: 4.58, h: 5.50 },
+  { n: 4, label: "Former RIC Barracks", href: "/cit-interactive/cit-barracks/", left: 33.02, top: 30.28, w: 4.47, h: 4.93 },
+  { n: 5, label: "St Mary's First National Mixed School (Fr Seymour's)", href: "/cit-interactive/cit-schools/", left: 64.51, top: 34.86, w: 4.70, h: 4.36 },
+  { n: 6, label: "Barryscourt Castle", href: "/cit-interactive/cit-barryscourt/", left: 39.84, top: 68.12, w: 4.58, h: 4.82 },
+  { n: 7, label: "Rossmore's Tithe War of 1833", href: "/cit-interactive/cit-rossmore/", left: 59.81, top: 77.52, w: 5.05, h: 5.73 }
+] %}
+
+<section class="mtu-village" aria-labelledby="mtu-village-title">
+  <header class="mtu-village-header">
+    <h1 id="mtu-village-title">MTU Interactive Village Map of Carrigtwohill</h1>
+    <p class="mtu-village-lead">Click a numbered site on the map, or choose from the key — each opens a short film about that place.</p>
+  </header>
+
+  <div class="mtu-village-layout">
+    <div class="mtu-village-stage" id="mtu-map-stage">
+      <img
+        class="mtu-village-image"
+        src="{{ '/assets/CITInteractive/Images/InteractiveMap.png' | url }}"
+        alt="Historic Ordnance Survey extract of Carrigtwohill with seven numbered heritage sites"
+        width="851"
+        height="872"
+        decoding="async"
+      >
+      {% for site in sites %}
+      <a
+        class="mtu-hotspot"
+        href="{{ site.href | url }}"
+        style="left: {{ site.left }}%; top: {{ site.top }}%; width: {{ site.w }}%; height: {{ site.h }}%;"
+        data-site="{{ site.n }}"
+        title="{{ site.label }}"
+      >
+        <span class="visually-hidden">{{ site.n }} — {{ site.label }}</span>
+      </a>
+      {% endfor %}
+    </div>
+
+    <aside class="mtu-village-key" aria-label="Map key">
+      <h2 class="mtu-village-key-title">Key</h2>
+      <ol class="mtu-village-key-list">
+        {% for site in sites %}
+        <li>
+          <a class="mtu-key-link" href="{{ site.href | url }}" data-site="{{ site.n }}">
+            <span class="mtu-key-num" aria-hidden="true">{{ site.n }}</span>
+            <span class="mtu-key-label">{{ site.label }}</span>
+          </a>
+        </li>
+        {% endfor %}
+      </ol>
+      <p class="mtu-village-footnote">
+        <a href="{{ '/cit-interactive/cit-interactive-map/' | url }}">About this MTU student project</a>
+      </p>
+    </aside>
+  </div>
+</section>
+
+<script>
+  (function () {
+    var stage = document.getElementById("mtu-map-stage");
+    if (!stage) return;
+    var root = stage.closest(".mtu-village");
+    function setActive(n, on) {
+      root.querySelectorAll('[data-site="' + n + '"]').forEach(function (el) {
+        el.classList.toggle("is-active", on);
+      });
+    }
+    root.querySelectorAll("[data-site]").forEach(function (el) {
+      el.addEventListener("mouseenter", function () { setActive(el.getAttribute("data-site"), true); });
+      el.addEventListener("mouseleave", function () { setActive(el.getAttribute("data-site"), false); });
+      el.addEventListener("focus", function () { setActive(el.getAttribute("data-site"), true); });
+      el.addEventListener("blur", function () { setActive(el.getAttribute("data-site"), false); });
+    });
+  })();
+</script>
