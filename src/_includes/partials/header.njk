@@ -15,20 +15,31 @@
     </div>
 
     <div class="header-mobile-tools">
-      {% set socialClass = "social-nav-compact" %}
-      {% include "partials/social-icons.njk" %}
+      <a class="btn btn-membership btn-membership-mobile" href="{{ '/membership/current-membership/' | url }}">Join</a>
       <button type="button" class="nav-toggle" aria-expanded="false" aria-controls="site-nav" data-nav-toggle>
-        <span class="nav-toggle-label">Menu</span>
+        <span class="nav-toggle-bars" aria-hidden="true">
+          <span></span><span></span><span></span>
+        </span>
+        <span class="nav-toggle-label" data-nav-toggle-label>Menu</span>
       </button>
     </div>
   </div>
 
   <nav id="site-nav" class="site-nav" aria-label="Primary" data-site-nav>
+    <div class="nav-mobile-panel">
+      <a class="btn btn-membership btn-membership-nav" href="{{ '/membership/current-membership/' | url }}">Join or Renew Membership</a>
+      {% set socialClass = "social-nav-mobile" %}
+      {% set socialLabel = "Social links" %}
+      {% include "partials/social-icons.njk" %}
+    </div>
     <ul class="nav-list">
       {% for item in navigation %}
       <li class="nav-item{% if item.children %} has-children{% endif %}">
         {% if item.children %}
-        <button type="button" class="nav-parent" data-nav-parent aria-expanded="false">{{ item.label }}</button>
+        <button type="button" class="nav-parent" data-nav-parent aria-expanded="false">
+          <span>{{ item.label }}</span>
+          <span class="nav-chevron" aria-hidden="true"></span>
+        </button>
         <ul class="nav-sub">
           {% for child in item.children %}
           <li>
