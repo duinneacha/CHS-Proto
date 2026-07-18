@@ -35,9 +35,76 @@
       .replace(/"/g, "&quot;");
   }
 
+  /** Average of ring vertices — good enough for townland label anchors. */
+  function ringCentroid(ring) {
+    let x = 0;
+    let y = 0;
+    let n = 0;
+    for (let i = 0; i < ring.length; i++) {
+      const c = ring[i];
+      if (!c || c.length < 2) continue;
+      x += c[0];
+      y += c[1];
+      n++;
+    }
+    if (!n) return null;
+    return [x / n, y / n];
+  }
+
+  function geometryLabelPoint(geom) {
+    if (!geom) return null;
+    if (geom.type === "Point") return geom.coordinates;
+    if (geom.type === "MultiPoint") return geom.coordinates[0] || null;
+    if (geom.type === "Polygon") {
+      return ringCentroid(geom.coordinates[0] || []);
+    }
+    if (geom.type === "MultiPolygon") {
+      let best = null;
+      let bestLen = -1;
+      for (const poly of geom.coordinates) {
+        const outer = poly[0] || [];
+        if (outer.length > bestLen) {
+          bestLen = outer.length;
+          best = ringCentroid(outer);
+        }
+      }
+      return best;
+    }
+    return null;
+  }
+
+  function townlandLabelCollection(fc) {
+    const features = [];
+    for (const f of fc.features || []) {
+      const name =
+        (f.properties && (f.properties.name || f.properties.name_en)) ||
+        (f.properties && f.properties.tags && f.properties.tags.name) ||
+        "";
+      if (!name) continue;
+      const pt = geometryLabelPoint(f.geometry);
+      if (!pt) continue;
+      features.push({
+        type: "Feature",
+        properties: {
+          name: String(name),
+          name_irish:
+            (f.properties && f.properties.name_irish) ||
+            (f.properties && f.properties.tags && f.properties.tags["name:ga"]) ||
+            "",
+        },
+        geometry: { type: "Point", coordinates: pt },
+      });
+    }
+    return { type: "FeatureCollection", features };
+  }
+
   function emptySourcesExtra() {
     return {
       townlands: {
+        type: "geojson",
+        data: { type: "FeatureCollection", features: [] },
+      },
+      "townland-labels": {
         type: "geojson",
         data: { type: "FeatureCollection", features: [] },
       },
@@ -57,7 +124,7 @@
         type: "fill",
         source: "townlands",
         layout: { visibility: "none" },
-        paint: { "fill-color": line, "fill-opacity": 0.04 },
+        paint: { "fill-color": line, "fill-opacity": 0.06 },
       },
       {
         id: "townland-outline",
@@ -66,29 +133,8 @@
         layout: { visibility: "none" },
         paint: {
           "line-color": line,
-          "line-opacity": satellite ? 0.75 : 0.55,
-          "line-width": 1,
-        },
-      },
-      {
-        id: "townland-names",
-        type: "symbol",
-        source: "townlands",
-        minzoom: 11.5,
-        layout: {
-          visibility: "none",
-          "text-field": ["get", "name"],
-          "text-font": ["Open Sans Regular", "Noto Sans Regular"],
-          "text-size": 11,
-          "text-max-width": 8,
-          "symbol-placement": "point",
-        },
-        paint: {
-          "text-color": satellite ? "#ffffff" : "#0b3d6e",
-          "text-halo-color": satellite
-            ? "rgba(20, 16, 12, 0.9)"
-            : "rgba(255, 253, 248, 0.95)",
-          "text-halo-width": 1.4,
+          "line-opacity": satellite ? 0.85 : 0.65,
+          "line-width": 1.25,
         },
       },
       {
@@ -112,6 +158,34 @@
         },
       },
     ];
+  }
+
+  /** Drawn last so names sit above satellite reference tiles. */
+  function townlandNameLayer(satellite) {
+    return {
+      id: "townland-names",
+      type: "symbol",
+      source: "townland-labels",
+      minzoom: 9.5,
+      layout: {
+        visibility: "none",
+        "text-field": ["get", "name"],
+        "text-font": ["Open Sans Regular"],
+        "text-size": ["interpolate", ["linear"], ["zoom"], 9.5, 10, 13, 13, 15, 15],
+        "text-max-width": 7,
+        "text-padding": 2,
+        "text-allow-overlap": false,
+        "text-ignore-placement": false,
+        "symbol-placement": "point",
+      },
+      paint: {
+        "text-color": satellite ? "#ffffff" : "#0b3d6e",
+        "text-halo-color": satellite
+          ? "rgba(10, 16, 24, 0.95)"
+          : "rgba(255, 253, 248, 0.95)",
+        "text-halo-width": 1.6,
+      },
+    };
   }
 
   function buildStyle(kind) {
@@ -145,6 +219,7 @@
           },
           { id: "osm", type: "raster", source: "osm" },
           ...boundaryLayers(false),
+          townlandNameLayer(false),
         ],
       };
     }
@@ -184,6 +259,7 @@
         { id: "esri-imagery", type: "raster", source: "esri-imagery" },
         ...boundaryLayers(true),
         { id: "esri-reference", type: "raster", source: "esri-reference" },
+        townlandNameLayer(true),
       ],
     };
   }
@@ -203,7 +279,6 @@
     let html = `<div class="map-popup">`;
     html += `<h3>${escapeHtml(place.name)}</h3>`;
 
-    // Always show image slot (real photo or placeholder)
     if (place.heroImage) {
       html += `<figure class="map-popup-figure"><img src="${escapeHtml(
         place.heroImage.startsWith("http")
@@ -279,18 +354,28 @@
     }
   }
 
+  function setToggleState(btn, on, onLabel, offLabel) {
+    if (!btn) return;
+    btn.setAttribute("aria-pressed", on ? "true" : "false");
+    btn.classList.toggle("is-active", on);
+    if (onLabel && offLabel) btn.textContent = on ? onLabel : offLabel;
+  }
+
   async function init() {
     const el = document.getElementById("chs-map");
     if (!el || typeof maplibregl === "undefined") return;
 
     const status = document.getElementById("map-status");
+    const hint = document.getElementById("map-layer-hint");
     if (status) status.hidden = false;
 
     let currentBasemap = "satellite";
     let townlandsOn = false;
     let townlandNamesOn = false;
     let townlandsData = null;
+    let townlandLabelsData = null;
     let parishesData = null;
+    let loadingBoundaries = false;
 
     const map = new maplibregl.Map({
       container: "chs-map",
@@ -319,20 +404,81 @@
     const btnTown = document.getElementById("map-townlands-toggle");
     const btnNames = document.getElementById("map-townland-names-toggle");
 
+    function updateHint() {
+      if (!hint) return;
+      const parts = [];
+      parts.push(
+        currentBasemap === "satellite" ? "Satellite view" : "Street map"
+      );
+      if (townlandsOn) parts.push("townland borders on");
+      if (townlandNamesOn) {
+        parts.push("townland names on");
+        if (map.getZoom() < 10.5) {
+          parts.push("zoom in a little if names look sparse");
+        }
+      }
+      if (!townlandsOn && !townlandNamesOn) {
+        parts.push("use the buttons above to show townland borders or names");
+      }
+      hint.textContent = parts.join(" · ");
+    }
+
+    function syncButtons() {
+      setToggleState(
+        btnBase,
+        currentBasemap === "street",
+        "Show satellite",
+        "Show street map"
+      );
+      // Basemap button: pressed = street mode active (optional); keep as action label
+      if (btnBase) {
+        btnBase.setAttribute(
+          "aria-pressed",
+          currentBasemap === "street" ? "true" : "false"
+        );
+        btnBase.classList.toggle("is-active", currentBasemap === "street");
+        btnBase.textContent =
+          currentBasemap === "satellite" ? "Show street map" : "Show satellite";
+      }
+      setToggleState(btnTown, townlandsOn, "Hide townland borders", "Show townland borders");
+      setToggleState(btnNames, townlandNamesOn, "Hide townland names", "Show townland names");
+      updateHint();
+    }
+
     async function ensureBoundaries() {
-      if (townlandsData && parishesData) return;
-      const [tRes, pRes] = await Promise.all([
-        fetch(prefixPath("/data/carrigtwohill-townlands.geojson")),
-        fetch(prefixPath("/data/carrigtwohill-parishes.geojson")),
-      ]);
-      if (tRes.ok) townlandsData = await tRes.json();
-      if (pRes.ok) parishesData = await pRes.json();
+      if (townlandsData && parishesData && townlandLabelsData) return;
+      if (loadingBoundaries) {
+        while (loadingBoundaries) {
+          await new Promise((r) => setTimeout(r, 50));
+        }
+        return;
+      }
+      loadingBoundaries = true;
+      if (btnTown) btnTown.disabled = true;
+      if (btnNames) btnNames.disabled = true;
+      try {
+        const [tRes, pRes] = await Promise.all([
+          fetch(prefixPath("/data/carrigtwohill-townlands.geojson")),
+          fetch(prefixPath("/data/carrigtwohill-parishes.geojson")),
+        ]);
+        if (tRes.ok) {
+          townlandsData = await tRes.json();
+          townlandLabelsData = townlandLabelCollection(townlandsData);
+        }
+        if (pRes.ok) parishesData = await pRes.json();
+      } finally {
+        loadingBoundaries = false;
+        if (btnTown) btnTown.disabled = false;
+        if (btnNames) btnNames.disabled = false;
+      }
     }
 
     function applyBoundaryData() {
       const t = map.getSource("townlands");
+      const tl = map.getSource("townland-labels");
       const p = map.getSource("parishes");
       if (t && townlandsData) t.setData(townlandsData);
+      if (tl && townlandLabelsData) tl.setData(townlandLabelsData);
       if (p && parishesData) p.setData(parishesData);
       setOverlayVisibility(
         map,
@@ -340,24 +486,29 @@
         townlandsOn
       );
       setOverlayVisibility(map, ["townland-names"], townlandNamesOn);
+      updateHint();
     }
 
-    map.on("style.load", applyBoundaryData);
+    map.on("style.load", () => {
+      applyBoundaryData();
+      syncButtons();
+    });
 
     if (btnBase) {
       btnBase.addEventListener("click", () => {
         currentBasemap = currentBasemap === "satellite" ? "street" : "satellite";
+        syncButtons();
         map.setStyle(buildStyle(currentBasemap), { diff: false });
-        btnBase.textContent =
-          currentBasemap === "satellite" ? "Street map" : "Satellite";
       });
     }
 
     if (btnTown) {
       btnTown.addEventListener("click", async () => {
         townlandsOn = !townlandsOn;
-        btnTown.setAttribute("aria-pressed", townlandsOn ? "true" : "false");
-        btnTown.classList.toggle("is-active", townlandsOn);
+        if (!townlandsOn && townlandNamesOn) {
+          // Keep names usable; borders can be off independently
+        }
+        syncButtons();
         if (townlandsOn) await ensureBoundaries();
         applyBoundaryData();
       });
@@ -366,24 +517,22 @@
     if (btnNames) {
       btnNames.addEventListener("click", async () => {
         townlandNamesOn = !townlandNamesOn;
-        btnNames.setAttribute(
-          "aria-pressed",
-          townlandNamesOn ? "true" : "false"
-        );
-        btnNames.classList.toggle("is-active", townlandNamesOn);
         if (townlandNamesOn) {
+          // Borders help names make sense — turn on together
           townlandsOn = true;
-          if (btnTown) {
-            btnTown.setAttribute("aria-pressed", "true");
-            btnTown.classList.add("is-active");
-          }
           await ensureBoundaries();
+          // Nudge zoom if labels would be sparse
+          if (map.getZoom() < 10.8) {
+            map.easeTo({ zoom: 11.2, duration: 600 });
+          }
         }
+        syncButtons();
         applyBoundaryData();
       });
     }
 
-    // Prefetch parish outline (small)
+    syncButtons();
+
     try {
       const pr = await fetch(prefixPath("/data/carrigtwohill-parishes.geojson"));
       if (pr.ok) parishesData = await pr.json();
@@ -410,7 +559,6 @@
       bounds.extend([lng, lat]);
       count++;
 
-      // HTML markers persist across setStyle (basemap swap)
       new maplibregl.Marker({
         element: createPinElement(place),
         anchor: "center",
@@ -425,6 +573,7 @@
     });
 
     map.on("style.load", syncLabelVisibility);
+    map.on("zoomend", updateHint);
 
     const applyBounds = () => {
       if (count > 1) {
@@ -437,6 +586,7 @@
         });
       }
       syncLabelVisibility();
+      updateHint();
       if (status) status.hidden = true;
     };
 

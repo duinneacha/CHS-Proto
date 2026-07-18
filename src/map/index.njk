@@ -10,13 +10,14 @@ bodyClass: map-page-body
   <div class="map-toolbar">
     <div class="map-toolbar-text">
       <h1 class="page-title">Historical Map</h1>
-      <p>Satellite view with a slight tilt. Zoom in to see place names. Turn on townlands to show boundaries and names. Red circles are MTU/CIT exhibit films.</p>
+      <p>Satellite view with a slight tilt. Zoom in to see place names on the pins. Use the layer buttons to show townland borders and names. Red circles are MTU/CIT exhibit films.</p>
     </div>
     <div class="map-toolbar-actions" role="group" aria-label="Map layers">
-      <button type="button" id="map-basemap-toggle" class="btn map-ctrl-btn" aria-pressed="true">Street map</button>
-      <button type="button" id="map-townlands-toggle" class="btn map-ctrl-btn" aria-pressed="false">Townland borders</button>
-      <button type="button" id="map-townland-names-toggle" class="btn map-ctrl-btn" aria-pressed="false">Townland names</button>
+      <button type="button" id="map-basemap-toggle" class="btn map-ctrl-btn" aria-pressed="false">Show street map</button>
+      <button type="button" id="map-townlands-toggle" class="btn map-ctrl-btn" aria-pressed="false">Show townland borders</button>
+      <button type="button" id="map-townland-names-toggle" class="btn map-ctrl-btn" aria-pressed="false">Show townland names</button>
     </div>
+    <p id="map-layer-hint" class="map-layer-hint" aria-live="polite">Satellite view · use the buttons above to show townland borders or names</p>
   </div>
   <div class="map-frame">
     <div id="chs-map" role="region" aria-label="Carrigtwohill historical map"></div>
