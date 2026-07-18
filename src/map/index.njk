@@ -26,4 +26,26 @@ bodyClass: map-page-body
     <span class="legend-places">Parish places</span>
     <span class="legend-mtu">MTU exhibit films</span>
   </div>
+
+  <aside class="map-contribute" aria-labelledby="map-contribute-title">
+    <div class="map-contribute-inner">
+      <h2 id="map-contribute-title">Help us enrich this map</h2>
+      <p>
+        Spot a missing place, a story, a photograph, or a correction? Your local knowledge is very welcome —
+        this map grows with the community.
+      </p>
+      <p class="map-contribute-email">
+        Email us at
+        <a href="mailto:{{ site.email }}">{{ site.email }}</a>
+        or reach us on social media:
+      </p>
+      {% set socialClass = "social-nav-map" %}
+      {% set socialLabel = "Contact and social links" %}
+      {% include "partials/social-icons.njk" %}
+      <p class="map-contribute-contact">
+        Prefer a form?
+        <a href="{{ '/about/contact-us/' | url }}">Use the contact page</a>.
+      </p>
+    </div>
+  </aside>
 </div>
