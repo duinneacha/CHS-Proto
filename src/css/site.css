@@ -1041,6 +1041,18 @@ body.mtu-map-page .site-main {
   background: rgba(177, 31, 44, 0.06);
   border-left: 4px solid var(--cork-red);
 }
+.page-jump {
+  margin: 0 0 1.1rem;
+  padding: 0.75rem 1rem;
+  background: var(--white);
+  border: 1px solid var(--line);
+  border-left: 4px solid var(--gold);
+  font-size: 1rem;
+}
+.page-jump a {
+  font-weight: 700;
+  color: var(--blue);
+}
 .mtu-back {
   margin: 0 0 1rem;
   font-size: 0.98rem;

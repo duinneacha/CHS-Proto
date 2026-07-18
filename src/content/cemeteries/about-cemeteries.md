@@ -7,18 +7,23 @@ oldPath: "/Cemeteries/AboutCemeteries.aspx"
 ---
 
 <h1>Our Local Cemeteries</h1>
+    <p class="page-jump">
+        <a href="/cemeteries/templecurraheen-graveyard/">Templecurraheen Graveyard</a>
+        — society page (photos and launch story)
+    </p>
     <p class="indentedText">
         There are two ancient cemeteries in Carrigtwohill. The main one in the village 
         surrounds the Augustinian Canon Abbey ruins (Coordinates 51°54'38.3"N 8°15'33.9"W), 
-        and another being at Templecurraheen. A resent addition is the new cemetery adjoining
+        and another being at <a href="/cemeteries/templecurraheen-graveyard/">Templecurraheen</a>. A resent addition is the new cemetery adjoining
         the old Abbey burial grounds. 
     </p>
     <p class="indentedText">
         A project totally independent of our society was conducted by a number of volunteers
-        known as the <a href="https://duinneacha.github.io/templecurraheen-website/" target="_blank">Templecurraheen Graveyard Documentation Project</a>
-        Many of their committee are also members of our historical society. The project findings was launched during 
+        known as the <a href="https://duinneacha.github.io/templecurraheen-website/" target="_blank" rel="noopener noreferrer">Templecurraheen Graveyard Documentation Project</a>
+        (burial register and grave photographs). Many of their committee are also members of our historical society. The project findings was launched during 
         an unveiling ceremony 4<sup>th</sup> May 2026, attended by many members of the 
-        local community. 
+        local community. See also our
+        <a href="/cemeteries/templecurraheen-graveyard/">society page on Templecurraheen</a>.
     </p>
     <p class="indentedText">
         At our 2026 AGM, one of this project committee, Aidan Dennehy, was elected as a member
