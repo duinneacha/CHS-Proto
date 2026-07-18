@@ -14,7 +14,6 @@
   {
     "label": "Projects",
     "children": [
-      { "label": "Historical Map", "url": "/map/" },
       { "label": "Munster Technical University (MTU)", "url": "/cit-interactive/cit-map/" },
       { "label": "Local Cemeteries", "url": "/cemeteries/about-cemeteries/" }
     ]

@@ -1073,8 +1073,7 @@ body.mtu-map-page .site-main {
 }
 .footer-links ul { list-style: none; margin: 0; padding: 0; }
 .footer-links a,
-.footer-email a,
-.footer-map a {
+.footer-email a {
   color: rgba(255,255,255,0.9);
 }
 
