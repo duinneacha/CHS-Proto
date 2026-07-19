@@ -8,8 +8,9 @@ oldPath: "/Cemeteries/Templecurraheen-graveyard.aspx"
 <aside class="project-cta" aria-label="Templecurraheen documentation website">
   <h2 class="project-cta-title">Templecurraheen Graveyard website</h2>
   <p class="project-cta-text">
-    Search the burial register, view grave photographs, and explore stories from the graveyard —
-    a separate documentation project developed by Aidan Dennehy.
+    Search the burial register, view grave photographs, and explore stories from the graveyard.
+    Developed by Aidan Dennehy with Cora and Michael Finn. The register rests on many hours of
+    careful work by Cora Finn, who recorded every legible inscription with Michael’s support as caretaker.
   </p>
   <p class="project-cta-actions">
     <a class="btn btn-project-cta" href="https://templecurraheen.ie/" target="_blank" rel="noopener noreferrer">Visit templecurraheen.ie</a>
