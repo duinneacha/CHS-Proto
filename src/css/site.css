@@ -1053,6 +1053,46 @@ body.mtu-map-page .site-main {
   font-weight: 700;
   color: var(--blue);
 }
+.project-cta {
+  clear: both;
+  margin: 0 0 1.5rem;
+  padding: 1.25rem 1.35rem 1.35rem;
+  background: linear-gradient(135deg, var(--blue) 0%, var(--blue-mid) 100%);
+  color: white;
+  border-bottom: 4px solid var(--gold);
+}
+.project-cta-title {
+  font-family: var(--font-display);
+  font-size: 1.45rem;
+  margin: 0 0 0.45rem;
+  color: var(--gold-soft);
+}
+.project-cta-text {
+  margin: 0 0 1rem;
+  max-width: 40rem;
+  color: rgba(255, 255, 255, 0.95);
+  font-size: 1.05rem;
+  line-height: 1.5;
+}
+.project-cta-actions {
+  margin: 0;
+}
+.btn-project-cta {
+  display: inline-block;
+  background: var(--gold);
+  color: var(--blue-deep);
+  border: 2px solid var(--gold-soft);
+  font-weight: 700;
+  font-size: 1.05rem;
+  padding: 0.7rem 1.15rem;
+  text-decoration: none;
+  border-radius: 2px;
+}
+.btn-project-cta:hover {
+  background: white;
+  color: var(--blue-deep);
+  border-color: white;
+}
 .mtu-back {
   margin: 0 0 1rem;
   font-size: 0.98rem;
