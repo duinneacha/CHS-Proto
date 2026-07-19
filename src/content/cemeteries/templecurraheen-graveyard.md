@@ -5,6 +5,17 @@ layout: layouts/page.njk
 oldPath: "/Cemeteries/Templecurraheen-graveyard.aspx"
 ---
 
+<aside class="project-cta" aria-label="Templecurraheen documentation website">
+  <h2 class="project-cta-title">Templecurraheen Graveyard website</h2>
+  <p class="project-cta-text">
+    Search the burial register, view grave photographs, and explore stories from the graveyard —
+    a separate documentation project developed by Aidan Dennehy.
+  </p>
+  <p class="project-cta-actions">
+    <a class="btn btn-project-cta" href="https://templecurraheen.ie/" target="_blank" rel="noopener noreferrer">Visit templecurraheen.ie</a>
+  </p>
+</aside>
+
 <figure class="FigureRight">
         <img src="/assets/Cemeteries/Templecurraheen%20Graveyard%20Panel.jpg" alt="TemplecurraheenPanel">
        <figcaption>Templecurraheen Display Panel</figcaption>
