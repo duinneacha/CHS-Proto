@@ -1,7 +1,10 @@
 <footer class="site-footer">
   <div class="footer-grid">
     <div class="footer-brand">
-      <p class="footer-title">{{ site.name }}</p>
+      <div class="footer-brand-lockup">
+        <img class="footer-mark" src="{{ '/assets/Styles/Images/CDHSLogo.png' | url }}" width="72" height="72" alt="" loading="lazy">
+        <p class="footer-title">{{ site.name }}</p>
+      </div>
       <p class="footer-email">
         Email:
         <a href="mailto:{{ site.email }}">{{ site.email }}</a>
@@ -36,10 +39,6 @@
           </a>
         </li>
       </ul>
-    </div>
-
-    <div class="footer-cta">
-      <a class="btn btn-membership btn-membership-footer" href="{{ '/membership/current-membership/' | url }}">Join or Renew Membership</a>
     </div>
   </div>
   <p class="footer-copy">&copy; {{ site.footerYear }} {{ site.name }}</p>

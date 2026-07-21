@@ -6,6 +6,68 @@ eleventyExcludeFromCollections: true
 ---
 <section class="error-page">
   <h1>Page not found</h1>
-  <p>That address is not on the new site. Old bookmarks with spaces or <code>.aspx</code> endings may need updating.</p>
+  <p id="redirect-status">That address is not on the new site. Checking for an updated link…</p>
   <p><a href="{{ '/' | url }}">Return home</a> · <a href="{{ '/map/' | url }}">Open the map</a> · <a href="{{ '/about/contact-us/' | url }}">Contact us</a></p>
 </section>
+<script>
+(function () {
+  var prefix = "{{ site.pathPrefix }}".replace(/\/?$/, "");
+  var mapUrl = "{{ '/data/url-map.json' | url }}";
+  var status = document.getElementById("redirect-status");
+
+  function norm(p) {
+    try { p = decodeURIComponent(p); } catch (e) {}
+    p = (p || "/").split("\\").join("/");
+    if (prefix && p.indexOf(prefix + "/") === 0) {
+      p = p.slice(prefix.length);
+    } else if (prefix && p === prefix) {
+      p = "/";
+    }
+    if (!p) p = "/";
+    if (p.charAt(0) !== "/") p = "/" + p;
+    if (p.length > 1 && p.endsWith("/")) p = p.slice(0, -1);
+    return p;
+  }
+
+  function candidates(p) {
+    var list = [p, p + "/", p.toLowerCase(), p.toLowerCase() + "/"];
+    if (!/\.aspx$/i.test(p)) {
+      list.push(p + ".aspx", (p + ".aspx").toLowerCase());
+    }
+    return list;
+  }
+
+  fetch(mapUrl)
+    .then(function (r) { return r.json(); })
+    .then(function (rows) {
+      var path = norm(location.pathname);
+      var wanted = candidates(path);
+      var hit = null;
+      for (var i = 0; i < rows.length; i++) {
+        var old = norm(rows[i].old || rows[i].oldEncoded || "");
+        var oldLower = old.toLowerCase();
+        for (var j = 0; j < wanted.length; j++) {
+          if (wanted[j] === old || wanted[j].toLowerCase() === oldLower) {
+            hit = rows[i];
+            break;
+          }
+        }
+        if (hit) break;
+      }
+      if (hit && hit.new) {
+        var dest = prefix + "/" + String(hit.new).replace(/^\//, "");
+        if (status) status.textContent = "This page has moved — redirecting…";
+        location.replace(dest);
+        return;
+      }
+      if (status) {
+        status.textContent = "That address is not on the new site. Old bookmarks with spaces or .aspx endings may need updating.";
+      }
+    })
+    .catch(function () {
+      if (status) {
+        status.textContent = "That address is not on the new site. Old bookmarks with spaces or .aspx endings may need updating.";
+      }
+    });
+})();
+</script>

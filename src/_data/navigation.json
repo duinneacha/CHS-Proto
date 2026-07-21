@@ -14,8 +14,8 @@
   {
     "label": "Projects",
     "children": [
-      { "label": "Munster Technical University (MTU)", "url": "/cit-interactive/cit-map/" },
-      { "label": "Local Cemeteries", "url": "/cemeteries/about-cemeteries/" },
+      { "label": "Munster Technical University (MTU)", "url": "/cit-interactive/" },
+      { "label": "Local Cemeteries", "url": "/cemeteries/" },
       { "label": "Templecurraheen Graveyard", "url": "/cemeteries/templecurraheen-graveyard/" }
     ]
   },

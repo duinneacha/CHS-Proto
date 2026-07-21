@@ -35,17 +35,17 @@ oldPath: "/About/AboutUs.aspx"
         Harte</a>, who upon formation of our Historical Society was the 'unanimous choice as its inaugural' President , a position
         he held until his recently lamented passing. R. I. P.
     </p>
-    <figure class="FigureCenter">
-        <img src="/assets/Styles/Social%20evening.jpg" alt="ImageSocial">
-        <figcaption>L-R: Ollie O'Connor, John O'Mahony, Jim Barry, Johnny Harte, and Michael Cummins</figcaption>
-    </figure>
     
     <p class="indentedText">
         Almost immediately upon formation a project was commenced collating archival material from a number of sources for
         eventual use, and reference. This has been continually added to over the years. Some of that material shall now be
         included in the relevant sections of this website.
     </p>
-    <h3>Inaugural Meeting & Launch - Carrigtwohill & District Historical Society</h3>
+    <h3>Inaugural Meeting &amp; Launch - Carrigtwohill &amp; District Historical Society</h3>
+    <figure class="FigureCenter">
+        <img src="/assets/Styles/Social%20evening.jpg" alt="Inaugural meeting and launch of Carrigtwohill & District Historical Society">
+        <figcaption>L-R: Ollie O'Connor, John O'Mahony, Jim Barry, Johnny Harte, and Michael Cummins</figcaption>
+    </figure>
     <p class="indentedText">
         The founding members remained the nucleus of the group until the inaugural meeting of Carrigtwohill & District Historical
         Society, 10<sup>th</sup> April 2013, when it was formally launched at the Community Council Centre. The opening passage of the Minutes
@@ -62,4 +62,24 @@ oldPath: "/About/AboutUs.aspx"
         then membership has steadily increased.
     </p>
     <h3>Our Constitution</h3>
-    <h2>Aims & Objectives</h2>
+    <h2>Aims &amp; Objectives</h2>
+    <p class="indentedText">
+        An amended constitution was signed by the committee and submitted as part of the society’s application to the Eirgrid Community Fund, 21<sup>st</sup> September 2023. It was further amended, 9<sup>th</sup> October 2025, to include the signatures of the then Executive Committee Members. The following is a section two outlining the purpose of the society.
+    </p>
+    <p class="indentedText">
+        The Society is established with the aim of achieving the following objectives:
+    </p>
+    <ul class="constitution-aims">
+        <li><span class="aim-ref">2.1</span> To generate a greater awareness and appreciation of our historic area, especially among the local population.</li>
+        <li><span class="aim-ref">2.2</span> To preserve and protect all our remaining historical features.</li>
+        <li><span class="aim-ref">2.3</span> To encourage research into and the recording of local history, archaeology, folk-life and folk lore and preserve and protect local heritage, songs, stories, photographs etc.</li>
+        <li><span class="aim-ref">2.4</span> To actively promote the Carrigtwohill area as a significant tourist centre.</li>
+        <li><span class="aim-ref">2.5</span> To encourage and undertake the publication of books and periodic reviews and the collection and copying of archives.</li>
+        <li><span class="aim-ref">2.6</span> To build a local archive of documents (or photocopies of documents), illustrations and artefacts relating to the local history of Carrigtwohill and the surrounding area.</li>
+        <li><span class="aim-ref">2.7</span> To organize historic lectures and talks by guests and members.</li>
+        <li><span class="aim-ref">2.8</span> To extend any of the above and develop additional activities as opportunities arise.</li>
+    </ul>
+    <p class="indentedText">
+        For a copy of the Constitution
+        <a href="/assets/Documents/constitution-amended-21-sept-2023.pdf">click here</a>.
+    </p>

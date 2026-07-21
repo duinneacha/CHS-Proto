@@ -29,13 +29,13 @@ oldPath: "/Membership/CurrentMembership.aspx"
         Cummins, or contact one of the committee for an appliction form. Membership remains unchanged at €20.00 per Annum 
         cycles through January - December.</p>
     <p class="indentedText">
-        Alternatively, if you are already a member and simply wish to renew your membership, but unable to do this in 
-        person, your renewal may be paid by clicking ‘Subscribe’ button, which will take you to PayPal payment facility.
+        Alternatively, if you are already a member and simply wish to renew your membership, but unable to do this in
+        person, your renewal may be paid by clicking the PayPal button below, which will take you to the PayPal payment facility.
         This, however, will attract a small PayPal fee, and something beyond our control.
     </p>
     <form class="paypal-form" action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_blank" rel="noopener noreferrer">
       <input type="hidden" name="cmd" value="_s-xclick">
       <input type="hidden" name="hosted_button_id" value="LCZ8X5MTUY8JE">
-      <input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_subscribeCC_LG.gif" border="0" name="submit" alt="PayPal – The safer, easier way to pay online.">
+      <input type="image" src="/assets/Styles/Images/SubscribeButton.png" border="0" name="submit" alt="Renew membership with PayPal">
       <img alt="" border="0" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1">
     </form>

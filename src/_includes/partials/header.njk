@@ -2,16 +2,14 @@
 <header class="site-header">
   <div class="header-bar">
     <a class="brand" href="{{ '/' | url }}">
-      <img class="brand-mark" src="{{ '/assets/Styles/Images/CDHSLogo.png' | url }}" width="64" height="64" alt="">
+      <img class="brand-mark" src="{{ '/assets/Styles/Images/CDHSLogo.png' | url }}" width="80" height="80" alt="">
       <span class="brand-text">
-        <span class="brand-name">Carrigtwohill &amp; District</span>
-        <span class="brand-sub">Historical Society</span>
+        <span class="brand-name">{{ site.name }}</span>
       </span>
     </a>
 
     <div class="header-actions">
       <a class="btn btn-membership" href="{{ '/membership/current-membership/' | url }}">Join or Renew Membership</a>
-      {% include "partials/social-icons.njk" %}
     </div>
 
     <div class="header-mobile-tools">
@@ -28,9 +26,6 @@
   <nav id="site-nav" class="site-nav" aria-label="Primary" data-site-nav>
     <div class="nav-mobile-panel">
       <a class="btn btn-membership btn-membership-nav" href="{{ '/membership/current-membership/' | url }}">Join or Renew Membership</a>
-      {% set socialClass = "social-nav-mobile" %}
-      {% set socialLabel = "Social links" %}
-      {% include "partials/social-icons.njk" %}
     </div>
     <ul class="nav-list">
       {% for item in navigation %}

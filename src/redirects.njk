@@ -1,0 +1,24 @@
+---
+pagination:
+  data: urlMap
+  size: 1
+  alias: redirect
+eleventyExcludeFromCollections: true
+permalink: "{{ redirect.old }}/"
+layout: false
+---
+<!DOCTYPE html>
+<html lang="en-IE">
+<head>
+  <meta charset="utf-8">
+  <title>Redirecting…</title>
+  <link rel="canonical" href="{{ site.url }}{{ site.pathPrefix }}{{ redirect.new }}">
+  <meta http-equiv="refresh" content="0;url={{ site.pathPrefix }}{{ redirect.new }}">
+  <script>
+    location.replace("{{ site.pathPrefix }}{{ redirect.new }}");
+  </script>
+</head>
+<body>
+  <p>This page has moved to <a href="{{ site.pathPrefix }}{{ redirect.new }}">{{ redirect.title or redirect.new }}</a>.</p>
+</body>
+</html>
