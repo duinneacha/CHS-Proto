@@ -78,7 +78,7 @@ a:hover { color: var(--cork-red); }
 .header-bar {
   max-width: var(--header-max);
   margin: 0 auto;
-  padding: 0.95rem 1.35rem;
+  padding: 1.1rem 1.35rem;
   display: flex;
   align-items: center;
   gap: 1rem;
@@ -95,13 +95,17 @@ a:hover { color: var(--cork-red); }
 }
 
 .brand-mark {
-  width: 5rem;
-  height: 5rem;
-  border-radius: 50%;
-  border: 2px solid var(--gold);
+  /* PNG is 640×466 (not square); size by height so the emblem reads large */
+  height: 12.5rem;
+  width: auto;
+  max-width: none;
+  max-height: none;
+  flex-shrink: 0;
+  border-radius: 0;
+  border: 0;
   background: transparent;
   object-fit: contain;
-  padding: 0.15rem;
+  padding: 0;
 }
 
 .brand-text { display: flex; flex-direction: column; line-height: 1.2; }
@@ -192,9 +196,9 @@ a:hover { color: var(--cork-red); }
 .social-nav-footer .social-link {
   width: 2.85rem;
   height: 2.85rem;
-  color: var(--gold-soft);
-  background: rgba(255, 255, 255, 0.08);
-  border-color: rgba(255, 255, 255, 0.2);
+  color: var(--blue);
+  background: var(--paper);
+  border-color: var(--line);
 }
 .social-nav-footer .social-icon {
   width: 1.45rem;
@@ -202,6 +206,8 @@ a:hover { color: var(--cork-red); }
 }
 .social-nav-footer .social-link:hover {
   color: white;
+  background: var(--blue);
+  border-color: var(--blue);
 }
 
 .btn {
@@ -1279,12 +1285,22 @@ body.mtu-map-page .site-main {
   background: #0a1624;
 }
 
-/* Footer */
+/* Footer — blue strip matches nav height; content on white for logo contrast */
 .site-footer {
-  background: var(--blue-deep);
-  color: rgba(255,255,255,0.88);
   margin-top: 2rem;
-  padding: 2.35rem 1.35rem 1.4rem;
+  padding: 0;
+  background: var(--white);
+  color: var(--ink);
+  border-top: 0;
+}
+.footer-bar {
+  height: 2.75rem; /* ~ main menu strip (0.7rem*2 + line) */
+  background: var(--blue);
+  border-bottom: 3px solid var(--gold);
+}
+.footer-body {
+  background: var(--white);
+  padding: 2rem 1.35rem 1.4rem;
 }
 .footer-grid {
   max-width: var(--header-max);
@@ -1297,22 +1313,24 @@ body.mtu-map-page .site-main {
 .footer-brand-lockup {
   display: flex;
   align-items: center;
-  gap: 0.85rem;
+  gap: 0.95rem;
   margin-bottom: 0.75rem;
 }
 .footer-mark {
-  width: 4.5rem;
-  height: 4.5rem;
-  border-radius: 50%;
-  border: 2px solid var(--gold);
+  height: 10rem;
+  width: auto;
+  max-width: none;
+  max-height: none;
+  flex-shrink: 0;
+  border-radius: 0;
+  border: 0;
   background: transparent;
   object-fit: contain;
-  padding: 0.15rem;
-  flex-shrink: 0;
+  padding: 0;
 }
 .footer-title {
   font-family: var(--font-display);
-  color: var(--gold-soft);
+  color: var(--blue);
   margin: 0;
   font-size: 1.25rem;
   line-height: 1.25;
@@ -1320,15 +1338,21 @@ body.mtu-map-page .site-main {
 .footer-heading {
   margin: 0 0 0.5rem;
   font-weight: 700;
-  color: var(--gold);
+  color: var(--blue);
   font-size: 0.85rem;
   text-transform: uppercase;
   letter-spacing: 0.06em;
 }
 .footer-links ul { list-style: none; margin: 0; padding: 0; }
+.footer-email {
+  color: var(--ink);
+}
 .footer-links a,
 .footer-email a {
-  color: rgba(255,255,255,0.9);
+  color: var(--blue);
+}
+.footer-email a:hover {
+  color: var(--cork-red);
 }
 
 .partner-list {
@@ -1344,14 +1368,15 @@ body.mtu-map-page .site-main {
   align-items: center;
   gap: 0.75rem;
   text-decoration: none;
-  color: rgba(255, 255, 255, 0.92);
+  color: var(--ink);
   padding: 0.4rem 0.5rem;
-  background: rgba(255, 255, 255, 0.06);
-  border: 1px solid rgba(255, 255, 255, 0.12);
+  background: var(--paper);
+  border: 1px solid var(--line);
 }
 .partner-link:hover {
-  background: rgba(255, 255, 255, 0.12);
-  color: var(--gold-soft);
+  background: var(--paper-2, #f0ebe3);
+  color: var(--blue);
+  border-color: var(--blue-mid);
 }
 .partner-link img {
   width: 3.5rem;
@@ -1366,14 +1391,14 @@ body.mtu-map-page .site-main {
   font-size: 0.92rem;
   line-height: 1.3;
 }
-.footer-note { font-size: 0.85rem; color: rgba(255,255,255,0.65); }
+.footer-note { font-size: 0.85rem; color: var(--muted); }
 .footer-copy {
   max-width: var(--header-max);
   margin: 1.75rem auto 0;
   padding-top: 1rem;
-  border-top: 1px solid rgba(255,255,255,0.15);
+  border-top: 1px solid var(--line);
   font-size: 0.85rem;
-  color: rgba(255,255,255,0.55);
+  color: var(--muted);
 }
 
 /* 404 */
@@ -1415,8 +1440,10 @@ body.mtu-map-page .site-main {
     gap: 0.55rem;
   }
   .brand-mark {
-    width: 3.65rem;
-    height: 3.65rem;
+    height: 6.75rem;
+    width: auto;
+    max-width: none;
+    max-height: none;
     flex-shrink: 0;
   }
   .brand-name {
